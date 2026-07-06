@@ -1,0 +1,54 @@
+2026-07-01 14:12:05.418 BST [116846] LOG:  starting PostgreSQL 17.10 (Debian 17.10-0+deb13u1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-07-01 14:12:05.418 BST [116846] LOG:  could not bind IPv6 address "::1": Address already in use
+2026-07-01 14:12:05.418 BST [116846] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2026-07-01 14:12:05.418 BST [116846] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2026-07-01 14:12:05.418 BST [116846] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2026-07-01 14:12:05.418 BST [116846] WARNING:  could not create listen socket for "localhost"
+2026-07-01 14:12:05.418 BST [116846] FATAL:  could not create any TCP/IP sockets
+2026-07-01 14:12:05.420 BST [116846] LOG:  database system is shut down
+2026-07-01 14:12:11.046 BST [116852] LOG:  starting PostgreSQL 17.10 (Debian 17.10-0+deb13u1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-07-01 14:12:11.046 BST [116852] LOG:  listening on IPv6 address "::1", port 5433
+2026-07-01 14:12:11.046 BST [116852] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-07-01 14:12:11.048 BST [116852] FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5433.lock": Permission denied
+2026-07-01 14:12:11.049 BST [116852] LOG:  database system is shut down
+2026-07-01 14:12:16.670 BST [116859] LOG:  starting PostgreSQL 17.10 (Debian 17.10-0+deb13u1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-07-01 14:12:16.671 BST [116859] LOG:  listening on IPv6 address "::1", port 5433
+2026-07-01 14:12:16.671 BST [116859] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-07-01 14:12:16.671 BST [116859] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5433"
+2026-07-01 14:12:16.675 BST [116862] LOG:  database system was shut down at 2026-07-01 14:12:02 BST
+2026-07-01 14:12:16.678 BST [116859] LOG:  database system is ready to accept connections
+2026-07-01 14:17:16.771 BST [116860] LOG:  checkpoint starting: time
+2026-07-01 14:18:55.514 BST [116860] LOG:  checkpoint complete: wrote 990 buffers (6.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=98.722 s, sync=0.013 s, total=98.743 s; sync files=341, longest=0.001 s, average=0.001 s; distance=4668 kB, estimate=4668 kB; lsn=0/197BD68, redo lsn=0/197BCD8
+2026-07-01 14:32:16.811 BST [116860] LOG:  checkpoint starting: time
+2026-07-01 14:32:17.527 BST [116860] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.702 s, sync=0.006 s, total=0.717 s; sync files=5, longest=0.006 s, average=0.002 s; distance=15 kB, estimate=4202 kB; lsn=0/197FC40, redo lsn=0/197FBE8
+2026-07-01 14:33:45.888 BST [120107] ERROR:  FOR UPDATE cannot be applied to the nullable side of an outer join
+2026-07-01 14:33:45.888 BST [120107] STATEMENT:  SELECT products.id AS products_id, products.name AS products_name, products.description AS products_description, products.price AS products_price, products.stock AS products_stock, products.category_id AS products_category_id, products.image_url AS products_image_url, products.is_active AS products_is_active, products.created_at AS products_created_at, products.updated_at AS products_updated_at, categories_1.id AS categories_1_id, categories_1.name AS categories_1_name, categories_1.description AS categories_1_description, categories_1.created_at AS categories_1_created_at 
+	FROM products LEFT OUTER JOIN categories AS categories_1 ON categories_1.id = products.category_id 
+	WHERE products.id = 1 
+	 LIMIT 1 FOR UPDATE
+2026-07-01 14:33:50.303 BST [120107] ERROR:  FOR UPDATE cannot be applied to the nullable side of an outer join
+2026-07-01 14:33:50.303 BST [120107] STATEMENT:  SELECT products.id AS products_id, products.name AS products_name, products.description AS products_description, products.price AS products_price, products.stock AS products_stock, products.category_id AS products_category_id, products.image_url AS products_image_url, products.is_active AS products_is_active, products.created_at AS products_created_at, products.updated_at AS products_updated_at, categories_1.id AS categories_1_id, categories_1.name AS categories_1_name, categories_1.description AS categories_1_description, categories_1.created_at AS categories_1_created_at 
+	FROM products LEFT OUTER JOIN categories AS categories_1 ON categories_1.id = products.category_id 
+	WHERE products.id = 1 
+	 LIMIT 1 FOR UPDATE
+2026-07-01 14:37:16.627 BST [116860] LOG:  checkpoint starting: time
+2026-07-01 14:37:19.649 BST [116860] LOG:  checkpoint complete: wrote 31 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.013 s, sync=0.002 s, total=3.023 s; sync files=22, longest=0.001 s, average=0.001 s; distance=18 kB, estimate=3784 kB; lsn=0/1984618, redo lsn=0/19845C0
+2026-07-01 15:12:00.675 BST [120875] ERROR:  FOR UPDATE cannot be applied to the nullable side of an outer join
+2026-07-01 15:12:00.675 BST [120875] STATEMENT:  SELECT products.id AS products_id, products.name AS products_name, products.description AS products_description, products.price AS products_price, products.stock AS products_stock, products.category_id AS products_category_id, products.image_url AS products_image_url, products.is_active AS products_is_active, products.created_at AS products_created_at, products.updated_at AS products_updated_at, categories_1.id AS categories_1_id, categories_1.name AS categories_1_name, categories_1.description AS categories_1_description, categories_1.created_at AS categories_1_created_at 
+	FROM products LEFT OUTER JOIN categories AS categories_1 ON categories_1.id = products.category_id 
+	WHERE products.id = 1 
+	 LIMIT 1 FOR UPDATE
+2026-07-01 15:12:08.604 BST [120875] ERROR:  FOR UPDATE cannot be applied to the nullable side of an outer join
+2026-07-01 15:12:08.604 BST [120875] STATEMENT:  SELECT products.id AS products_id, products.name AS products_name, products.description AS products_description, products.price AS products_price, products.stock AS products_stock, products.category_id AS products_category_id, products.image_url AS products_image_url, products.is_active AS products_is_active, products.created_at AS products_created_at, products.updated_at AS products_updated_at, categories_1.id AS categories_1_id, categories_1.name AS categories_1_name, categories_1.description AS categories_1_description, categories_1.created_at AS categories_1_created_at 
+	FROM products LEFT OUTER JOIN categories AS categories_1 ON categories_1.id = products.category_id 
+	WHERE products.id = 1 
+	 LIMIT 1 FOR UPDATE
+2026-07-01 15:17:17.351 BST [116860] LOG:  checkpoint starting: time
+2026-07-01 15:17:19.781 BST [116860] LOG:  checkpoint complete: wrote 25 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.419 s, sync=0.002 s, total=2.430 s; sync files=19, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=3406 kB; lsn=0/1985088, redo lsn=0/1985030
+2026-07-01 18:02:20.207 BST [116860] LOG:  checkpoint starting: time
+2026-07-01 18:02:20.723 BST [116860] PANIC:  could not open file "/home/alxyz/Downloads/Project/backend/pgdata/global/pg_control": No such file or directory
+2026-07-01 18:02:20.724 BST [116859] LOG:  checkpointer process (PID 116860) was terminated by signal 6: Aborted
+2026-07-01 18:02:20.724 BST [116859] LOG:  terminating any other active server processes
+2026-07-01 18:02:20.725 BST [116859] LOG:  all server processes terminated; reinitializing
+2026-07-01 18:02:20.730 BST [116859] FATAL:  could not stat data directory "/home/alxyz/Downloads/Project/backend/pgdata": No such file or directory
+2026-07-01 18:02:20.730 BST [116859] LOG:  database system is shut down
